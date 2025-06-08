@@ -1,8 +1,8 @@
-# SOS Climatech - Aplicativo React Native (TypeScript)
+# SOS Climatech - Aplicativo React Native
 
-Este projeto é um aplicativo móvel desenvolvido em React Native com TypeScript e Expo, seguindo a estrutura e padrões do projeto de referência `mottu-track-challenge`.
+Este projeto é um aplicativo móvel desenvolvido em React Native com TypeScript e Expo.
 
-O objetivo é fornecer uma ferramenta para registrar pessoas impactadas por eventos climáticos extremos e gerenciar os próprios eventos, consumindo uma API Java backend (fornecida separadamente).
+O objetivo é fornecer uma ferramenta para registrar pessoas impactadas por eventos climáticos extremos e gerenciar os próprios eventos, consumindo uma API Java backend.
 
 ## 🚀 Funcionalidades
 
@@ -65,18 +65,15 @@ O objetivo é fornecer uma ferramenta para registrar pessoas impactadas por even
         *   Escaneie o QR code com o app Expo Go no seu celular.
         *   Ou pressione `a` para abrir no emulador Android, `i` para abrir no simulador iOS.
 
-## 👥 Integrantes do Grupo
-
-*   [Nome Completo do Integrante 1] - [RM do Integrante 1]
-*   [Nome Completo do Integrante 2] - [RM do Integrante 2]
-*   [Nome Completo do Integrante 3] - [RM do Integrante 3]
-*   ... (Adicione todos os integrantes)
 
 ## 📺 Vídeo de Demonstração
 
 [**Link para o vídeo no YouTube AQUI**]
 
----
+## 👨‍💻 Desenvolvedores
 
-*Desenvolvido como parte do desafio proposto.*
-
+| Nome                          | RM      | GitHub |
+|-------------------------------|---------|--------|
+| Enzo Dias Alfaia Mendes       | 558438  | [@enzodam](https://github.com/enzodam) |
+| Matheus Henrique Germano Reis | 555861  | [@MatheusReis48](https://github.com/MatheusReis48) |
+| Luan Dantas dos Santos        | 559004  | [@lds2125](https://github.com/lds2125) |
