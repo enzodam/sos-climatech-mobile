@@ -1,70 +1,125 @@
-# SOS Climatech - Aplicativo React Native
+# SOS Climatech - Aplicativo Mobile
 
-Este projeto é um aplicativo móvel desenvolvido em React Native com TypeScript e Expo.
-
-O objetivo é fornecer uma ferramenta para registrar pessoas impactadas por eventos climáticos extremos e gerenciar os próprios eventos, consumindo uma API Java backend.
+Este projeto é um aplicativo móvel desenvolvido em React Native com TypeScript e Expo, parte da iniciativa SOS Climatech. Ele visa ser uma ferramenta essencial para o registro e gerenciamento de informações cruciais durante eventos climáticos extremos, permitindo o cadastro de pessoas afetadas, localidades, recursos disponíveis e registros de ajuda. O aplicativo interage com uma API Java backend para persistência e recuperação de dados.
 
 ## 🚀 Funcionalidades
 
+O aplicativo oferece as seguintes funcionalidades principais:
+
 *   **Gerenciamento de Eventos Climáticos:**
-    *   Listar todos os eventos cadastrados.
-    *   Adicionar novos eventos (tipo, localidade, data, impacto).
-    *   Visualizar detalhes de um evento específico.
-    *   Editar informações de um evento existente.
-    *   Remover um evento.
+    *   Listar, adicionar, visualizar detalhes, editar e remover eventos climáticos.
+*   **Gerenciamento de Localidades:**
+    *   Listar, adicionar, visualizar detalhes, editar e remover localidades afetadas.
 *   **Gerenciamento de Pessoas Afetadas:**
-    *   Listar todas as pessoas cadastradas.
-    *   Adicionar novas pessoas (nome, CPF, cidade, evento relacionado).
-    *   Visualizar detalhes de uma pessoa específica.
-    *   Editar informações de uma pessoa existente.
-    *   Remover uma pessoa.
-*   **Interface:**
-    *   Navegação intuitiva entre telas usando Stack Navigator.
-    *   Interface com tema escuro, inspirada no projeto de referência.
-    *   Feedback visual para carregamento (loading) e tratamento de erros.
+    *   Listar, adicionar, visualizar detalhes, editar, remover e atualizar o status de assistência de pessoas afetadas.
+*   **Gerenciamento de Recursos:**
+    *   Listar, adicionar, visualizar detalhes, editar e remover recursos (ex: alimentos, água, abrigo).
+*   **Gerenciamento de Registros de Ajuda:**
+    *   Listar, adicionar, visualizar detalhes, remover e marcar registros de ajuda como não entregues.
+*   **Interface Intuitiva:**
+    *   Navegação fluida entre telas utilizando Stack Navigator.
+    *   Design moderno com tema escuro.
+    *   Feedback visual para operações de carregamento e tratamento de erros.
 
 ## 🛠 Tecnologias Utilizadas
 
-*   React Native
-*   Expo
-*   TypeScript
-*   React Navigation (Native Stack)
-*   Axios (para comunicação com a API)
-*   StyleSheet (para estilização)
+*   **Frontend:**
+    *   React Native
+    *   Expo
+    *   TypeScript
+    *   React Navigation (Native Stack)
+    *   Axios (para comunicação com a API)
+    *   StyleSheet (para estilização)
+*   **Backend (API):**
+    *   Java
+    *   Spring Boot
 
 ## ⚙️ Configuração e Execução
 
-1.  **Pré-requisitos:**
-    *   Node.js (LTS recomendado)
-    *   npm ou yarn
-    *   Expo Go app no seu dispositivo móvel (Android/iOS) ou um emulador/simulador configurado.
-    *   **API Java Backend:** Certifique-se de que a API Java (`sos-climatech-api`) esteja configurada, rodando e acessível pela rede (geralmente em `http://localhost:8080` ou um IP específico).
+Para configurar e executar o projeto, siga os passos abaixo:
 
-2.  **Instalação:**
-    *   Clone ou descompacte este repositório.
-    *   Navegue até a pasta raiz do projeto (`sos-climatech-app-ts`) pelo terminal.
-    *   Execute o comando para instalar as dependências:
-        ```bash
-        npm install
-        # ou
-        # yarn install
-        ```
+### Pré-requisitos
 
-3.  **Configuração da API:**
-    *   Abra o arquivo `services/api.ts`.
-    *   **IMPORTANTE:** Ajuste a constante `API_BASE_URL` para o endereço correto onde sua API Java está rodando e acessível pelo seu dispositivo/emulador.
-        *   Para emulador Android padrão: `http://10.0.2.2:8080/api` (se a API estiver em `localhost:8080` na sua máquina).
-        *   Para emulador iOS ou dispositivo físico na mesma rede Wi-Fi: Use o endereço IP da sua máquina na rede local (ex: `http://192.168.1.100:8080/api`).
+Certifique-se de ter os seguintes softwares instalados:
 
-4.  **Execução:**
-    *   Com a API Java rodando e o `API_BASE_URL` configurado corretamente, inicie o aplicativo Expo:
-        ```bash
-        npx expo start
-        ```
-    *   Siga as instruções no terminal para abrir o aplicativo:
-        *   Escaneie o QR code com o app Expo Go no seu celular.
-        *   Ou pressione `a` para abrir no emulador Android, `i` para abrir no simulador iOS.
+*   Node.js (versão LTS recomendada)
+*   npm ou Yarn
+*   Expo Go app (no seu dispositivo móvel) ou um emulador/simulador de Android/iOS configurado.
+*   **API Java Backend:** A API backend (`sos-climatech-api`) deve estar rodando e acessível. Você pode encontrar a documentação da API em [https://sos-climatech-api.onrender.com/swagger-ui/index.html](https://sos-climatech-api.onrender.com/swagger-ui/index.html).
 
+### Instalação
+
+1.  Clone ou descompacte este repositório para o seu ambiente local.
+2.  Navegue até a pasta raiz do projeto (`sos-climatech-mobile-main`) pelo terminal:
+    ```bash
+    cd sos-climatech-mobile-main
+    ```
+3.  Instale as dependências do projeto:
+    ```bash
+    npm install
+    # ou
+    # yarn install
+    ```
+
+
+### Execução
+
+Com a API Java rodando e depois da instalação da dependências, inicie o aplicativo Expo:
+
+```bash
+npx expo start
+```
+
+Siga as instruções no terminal para abrir o aplicativo:
+
+*   Escaneie o QR code exibido com o aplicativo Expo Go no seu celular.
+*   Pressione `a` para abrir no emulador Android.
+*   Pressione `i` para abrir no simulador iOS.
+
+## 🌐 Endpoints da API
+
+O aplicativo interage com os seguintes endpoints da API SOS Climatech:
+
+### Eventos Climáticos
+
+*   `GET /api/eventos`: Lista todos os eventos climáticos.
+*   `POST /api/eventos`: Cadastra um novo evento climático.
+*   `GET /api/eventos/{id}`: Busca um evento climático por ID.
+*   `PUT /api/eventos/{id}`: Atualiza um evento climático existente.
+*   `DELETE /api/eventos/{id}`: Remove um evento climático por ID.
+
+### Localidades
+
+*   `GET /api/localidades`: Lista todas as localidades.
+*   `POST /api/localidades`: Cadastra uma nova localidade.
+*   `GET /api/localidades/{id}`: Busca uma localidade por ID.
+*   `PUT /api/localidades/{id}`: Atualiza uma localidade existente.
+*   `DELETE /api/localidades/{id}`: Remove uma localidade por ID.
+
+### Pessoas Afetadas
+
+*   `GET /api/pessoas`: Lista todas as pessoas afetadas.
+*   `POST /api/pessoas`: Cadastra uma nova pessoa afetada.
+*   `GET /api/pessoas/{id}`: Busca uma pessoa afetada por ID.
+*   `PUT /api/pessoas/{id}`: Atualiza uma pessoa afetada existente.
+*   `DELETE /api/pessoas/{id}`: Remove uma pessoa afetada por ID.
+*   `PATCH /api/pessoas/{id}/status`: Atualiza o status de assistência de uma pessoa afetada.
+
+### Recursos
+
+*   `GET /api/recursos`: Lista todos os recursos.
+*   `POST /api/recursos`: Cadastra um novo recurso.
+*   `GET /api/recursos/{id}`: Busca um recurso por ID.
+*   `PUT /api/recursos/{id}`: Atualiza um recurso existente.
+*   `DELETE /api/recursos/{id}`: Remove um recurso por ID.
+
+### Registros de Ajuda
+
+*   `GET /api/registros-ajuda`: Lista todos os registros de ajuda.
+*   `POST /api/registros-ajuda`: Cadastra um novo registro de ajuda (automaticamente marcado como entregue).
+*   `GET /api/registros-ajuda/{id}`: Busca um registro de ajuda por ID.
+*   `DELETE /api/registros-ajuda/{id}`: Remove um registro de ajuda por ID.
+*   `PUT /api/registros-ajuda/{id}/nao-entregue`: Marca um registro de ajuda como NÃO entregue.
 
 ## 📺 Vídeo de Demonstração
 
@@ -77,3 +132,5 @@ O objetivo é fornecer uma ferramenta para registrar pessoas impactadas por even
 | Enzo Dias Alfaia Mendes       | 558438  | [@enzodam](https://github.com/enzodam) |
 | Matheus Henrique Germano Reis | 555861  | [@MatheusReis48](https://github.com/MatheusReis48) |
 | Luan Dantas dos Santos        | 559004  | [@lds2125](https://github.com/lds2125) |
+
+
