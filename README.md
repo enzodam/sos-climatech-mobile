@@ -132,8 +132,10 @@ O aplicativo interage com os seguintes endpoints da API SOS Climatech:
 ## 📺 Vídeo de Demonstração
 
 ```
-    https://www.youtube.com/watch?v=W-H_wFn59Bk
-    ```
+https://www.youtube.com/watch?v=W-H_wFn59Bk
+```
+
+---
 
 ## 👨‍💻 Desenvolvedores
 
