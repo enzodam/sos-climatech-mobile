@@ -64,7 +64,15 @@ Certifique-se de ter os seguintes softwares instalados:
 
 ### Execução
 
-Com a API Java rodando e depois da instalação da dependências, inicie o aplicativo Expo:
+Com a API Java rodando:
+
+1.  A forma mais fácil de usar a API é através da documentação interativa Swagger. Abra o seguinte link no seu navegador, substituindo o placeholder pela URL real da aplicação no Render:
+    ```
+    https://sos-climatech-api.onrender.com/swagger-ui/index.html
+    ```
+
+
+2. depois da instalação da dependências, inicie o aplicativo Expo:
 
 ```bash
 npx expo start
